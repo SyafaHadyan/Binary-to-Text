@@ -1,7 +1,8 @@
-def bits_to_text(bits, encoding='utf-8', errors='surrogatepass'):
-    n = int(bits, 2)
-    return n.to_bytes((n.bit_length() + 7) // 8, 'big').decode(encoding, errors) or '\0'
+def binary_to_text(binary_string):
+    decimal_num = int(binary_string, 2)
+    text = chr(decimal_num)
+    return text
 
-input_bits = input("Enter binary code: ")
-output_text = bits_to_text(input_bits)
-print("Text equivalent:", output_text)
+binary_str = "01110110"
+text = binary_to_text(binary_str)
+print(text)
