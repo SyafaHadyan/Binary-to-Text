@@ -3,6 +3,6 @@ def binary_to_text(binary_string):
     text = chr(decimal_num)
     return text
 
-binary_str = "01110110"
+binary_str = input("Binary:")
 text = binary_to_text(binary_str)
 print(text)
